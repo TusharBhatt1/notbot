@@ -41,12 +41,12 @@ const errorMessage = (error) => {
           
             <div className="flex flex-col">
               <strong>Your email :</strong>
-              <input  type="email" {...register("email")} />
+              <input className="p-3" type="email" {...register("email")} />
              {errors.email ? <p className="error-msg">{errors.email.message}</p> : <p  className="text-white">.</p>}
             </div>
             <div className="flex flex-col">
             <strong>Your password :</strong>
-              <input className="p-4" type="password" {...register("password")} />
+              <input className="p-3" type="password" {...register("password")} />
               {errors.password ? <p className="error-msg">{errors.password?.message}</p> : <p  className="text-white">.</p>}
             </div>
            
