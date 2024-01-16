@@ -41,6 +41,7 @@ useEffect(()=>{
      <div className="flex justify-center items-center h-[80vh]">
       <div className="flex  flex-col gap-3">
         <p className="text-blue-700 text-xl font-bold">What makes it unique</p>
+       
         <span>Technology stacks : React + Typescript + Tailwind</span>
         <span>Proper replication of the given web pages</span>
         <span>Fully Responsive Design</span>
