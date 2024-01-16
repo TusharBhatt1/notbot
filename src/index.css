@@ -9,13 +9,13 @@ input{
     border: 1px solid grey;
     padding-top: 10px;
     border-radius: 4px;
-    padding: 7px;
+    padding: 10px;
 }
 button{
     border:1px solid black;
     width: 100%;
     border-radius: 4px;
-    padding: 12px;
+    padding: 10px;
 }
 
 .error-msg{
