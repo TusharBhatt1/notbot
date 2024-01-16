@@ -6,7 +6,7 @@ import { IoClose } from "react-icons/io5";
 export default function BookingOptions() {
   const [showMsg, setShowMsg] = useState(true);
   return (
-    <div className="flex flex-wrap flex-col md:flex-row justify-center gap-7 items-center">
+    <div className="flex flex-wrap flex-col md:flex-row justify-center gap-2 md:gap-7 items-center">
       <BookingCard time={"15"} />
       <BookingCard time={"45"} />
       <BookingCard time={"60"} />
