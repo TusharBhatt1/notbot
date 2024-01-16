@@ -41,12 +41,12 @@ const errorMessage = (error) => {
           
             <div className="flex flex-col">
               <strong>Your email :</strong>
-              <input type="email" {...register("email")} />
+              <input className="p-4" type="email" {...register("email")} />
              {errors.email ? <p className="error-msg">{errors.email.message}</p> : <p  className="text-white">.</p>}
             </div>
             <div className="flex flex-col">
             <strong>Your password :</strong>
-              <input type="password" {...register("password")} />
+              <input className="p-4" type="password" {...register("password")} />
               {errors.password ? <p className="error-msg">{errors.password?.message}</p> : <p  className="text-white">.</p>}
             </div>
            
@@ -56,7 +56,7 @@ const errorMessage = (error) => {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <button type="submit" className="formButton bg-blue-500 flex justify-center items-center">Login <FaArrowRight size={27}/></button>
+            <button type="submit" className="formButton bg-blue-500 flex justify-center items-center py-4">Login <FaArrowRight size={27}/></button>
             <p className="text-center text-slate-400">Or</p>
             <div className="flex justify-center items-center">
             <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
