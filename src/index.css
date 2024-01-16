@@ -2,13 +2,12 @@
     padding: 4px;
     font-family: "Poppins";
     font-size:12px;
-  
 }
 
 input{
     border: 1px solid grey;
     border-radius: 4px;
-    padding: 12px;
+    padding: 32px;
 }
 button{
     border:1px solid black;
