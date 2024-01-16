@@ -1,7 +1,7 @@
 
 export default function Footer() {
   return (
-    <div className='flex justify-center items-center text-center'>
+    <div className='flex justify-center items-center text-center mt-4'>
      
         <div className='py-2'>
             <p>By <span className='font-bold text-blue-500'>Tushar Bhatt</span></p>
