@@ -8,8 +8,11 @@ import { loginSchema } from "../Validation/ValidationSchema";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import { GoogleLogin } from "@react-oauth/google";
+import { useEffect, useState } from "react";
 
 export default function LoginSignUp() {
+  const [showIntro, setShowIntro]=useState(true)
+  const [showContinue, setShowContinue]=useState(false)
   const navigate=useNavigate()
   const {register , formState:{errors} , handleSubmit}=useForm({resolver:yupResolver(loginSchema)})
   
@@ -27,8 +30,29 @@ const errorMessage = (error) => {
     alert("Google Login Failed")
 };
 
+useEffect(()=>{
+ 
+  setTimeout(()=>{setShowContinue(true)},2000)
+},[])
 
   return (
+    <div>
+     {showIntro ? (
+     <div className="flex justify-center items-center h-[80vh]">
+      <div className="flex  flex-col gap-3 text-blue-700">
+        <p className="text-blue-700 text-xl font-bold">What makes it unique</p>
+        <span>Technology stacks : React + Typescript + Tailwind</span>
+        <span>Proper replication of the given web pages</span>
+        <span>Fully Responsive Design</span>
+        <span>Proper form validation (using React Hook Form + Yup)</span>
+        <span>Reusable Components</span>
+        <span>Google Authentication : Login , Logout , use of local storage</span>
+
+        {showContinue ? <button className="fadeIn animate-bounce mt-3" onClick={()=>setShowIntro(false)}>Continue</button>
+        : <p className="text-white">.</p>}
+      </div>
+      <div class="loader"></div>
+      </div>):(
     <div className="flex justify-center items-center  ">
       <div className="w-full md:w-[40vw] flex flex-col gap-4">
         <p className="text-xl text-center flex justify-center items-center"><img src={logo} className="h-10 w-10" alt="Tidycal"/>TidyCal</p>
@@ -56,7 +80,7 @@ const errorMessage = (error) => {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <button type="submit" className="formButton bg-blue-500 flex justify-center items-center py-4">Login <FaArrowRight size={27}/></button>
+            <button type="submit" className=" text-white formButton bg-blue-500 flex justify-center items-center py-4">Login <FaArrowRight size={27}/></button>
             <p className="text-center text-slate-400">Or</p>
             <div className="flex justify-center items-center">
             <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
@@ -70,6 +94,7 @@ const errorMessage = (error) => {
           </form>
         </div>
       </div>
+    </div>)}
     </div>
   );
 }
