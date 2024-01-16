@@ -32,7 +32,7 @@ const errorMessage = (error) => {
     <div className="flex justify-center items-center  ">
       <div className="w-full md:w-[40vw] flex flex-col gap-4">
         <p className="text-xl text-center flex justify-center items-center"><img src={logo} className="h-10 w-10" alt="Tidycal"/>TidyCal</p>
-        <div className="flex flex-col px-4 border-2 border-slate-200 rounded-lg  ">
+        <div className="flex flex-col px-4 border-2 border-slate-200 rounded-lg">
           <div>
             <p className="text-center text-slate-500 text-2xl border-slate-200">Login</p>
           </div>
@@ -41,7 +41,7 @@ const errorMessage = (error) => {
           
             <div className="flex flex-col">
               <strong>Your email :</strong>
-              <input className="p-4" type="email" {...register("email")} />
+              <input  type="email" {...register("email")} />
              {errors.email ? <p className="error-msg">{errors.email.message}</p> : <p  className="text-white">.</p>}
             </div>
             <div className="flex flex-col">
