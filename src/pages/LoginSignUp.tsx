@@ -38,8 +38,8 @@ useEffect(()=>{
   return (
     <div>
      {showIntro ? (
-     <div className="flex justify-center items-center h-[80vh]">
-      <div className="flex  flex-col gap-3">
+     <div className="flex gap-4  justify-center items-center h-[80vh]">
+      <div className="flex  flex-col gap-3 rounded-lg shadow-xl p-4">
         <p className="text-blue-700 text-xl font-bold">What makes it unique</p>
        
         <span>Technology stacks : React + Typescript + Tailwind</span>
