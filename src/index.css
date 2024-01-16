@@ -1,0 +1,24 @@
+*{
+    padding: 4px;
+    font-family: "Poppins";
+    font-size:12px;
+  
+}
+
+input{
+    border: 1px solid grey;
+    padding-top: 10px;
+    border-radius: 4px;
+    padding: 7px;
+}
+button{
+    border:1px solid black;
+    width: 100%;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.error-msg{
+    color: red;
+    font-size:x-small;
+}
