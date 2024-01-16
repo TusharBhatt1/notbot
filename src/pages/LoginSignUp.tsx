@@ -39,7 +39,7 @@ useEffect(()=>{
     <div>
      {showIntro ? (
      <div className="flex justify-center items-center h-[80vh]">
-      <div className="flex  flex-col gap-3 text-blue-700">
+      <div className="flex  flex-col gap-3">
         <p className="text-blue-700 text-xl font-bold">What makes it unique</p>
         <span>Technology stacks : React + Typescript + Tailwind</span>
         <span>Proper replication of the given web pages</span>
@@ -47,8 +47,9 @@ useEffect(()=>{
         <span>Proper form validation (using React Hook Form + Yup)</span>
         <span>Reusable Components</span>
         <span>Google Authentication : Login , Logout , use of local storage</span>
+        <span>Clean code</span>
 
-        {showContinue ? <button className="fadeIn animate-bounce mt-3" onClick={()=>setShowIntro(false)}>Continue</button>
+        {showContinue ? <button className="fadeIn animate-bounce mt-3 p-3" onClick={()=>setShowIntro(false)}>Continue</button>
         : <p className="text-white">.</p>}
       </div>
       <div class="loader"></div>
