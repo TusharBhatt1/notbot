@@ -83,7 +83,7 @@ export default function Navbar() {
       </div>
 
       {/* mobile view */}
-      <div className="flex text-xs sm:hidden justify-start items-center p-3">
+      <div className="flex text-xs sm:hidden justify-between items-center p-3">
         <div>
           <img src={logo} alt="logo" className="h-10 w-10" />
           {showSideMenus && (
